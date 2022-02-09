@@ -45,6 +45,7 @@ public class FadeManager : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        sprite.color = new Color(0f, 0f, 0f, 1f);
 
         //ƒV[ƒ“Ø‘Ö .
         SceneManager.LoadScene(scene);
@@ -57,5 +58,6 @@ public class FadeManager : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        sprite.color = new Color(0f, 0f, 0f, 0f);
     }
 }
