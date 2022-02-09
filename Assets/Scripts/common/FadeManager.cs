@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,24 +20,26 @@ public class FadeManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+
     /// <summary>
-    /// ‰æ–Ê‘JˆÚ .
+    /// ã‚·ãƒ¼ãƒ³é·ç§»ã•ã›ã‚‹é–¢æ•°
     /// </summary>
-    /// <param name='scene'>ƒV[ƒ“–¼</param>
-    /// <param name='interval'>ˆÃ“]‚É‚©‚©‚éŠÔ(•b)</param>
+    /// <param name="scene">é·ç§»å…ˆã®ã‚·ãƒ¼ãƒ³å</param>
+    /// <param name="interval">æš—è»¢ã®ç§’æ•°</param>
     public void LoadScene(string scene, float interval)
     {
         StartCoroutine(TransScene(scene, interval));
     }
 
     /// <summary>
-    /// ƒV[ƒ“‘JˆÚ—pƒRƒ‹[ƒ`ƒ“ .
+    /// ã‚·ãƒ¼ãƒ³é·ç§»ç”¨ã®ã‚³ãƒ«ãƒ¼ãƒãƒ³
     /// </summary>
-    /// <param name='scene'>ƒV[ƒ“–¼</param>
-    /// <param name='interval'>ˆÃ“]‚É‚©‚©‚éŠÔ(•b)</param>
+    /// <param name="scene">ã‚·ãƒ¼ãƒ³å</param>
+    /// <param name="interval">æš—è»¢ã®ç§’æ•°</param>
+    /// <returns></returns>
     private IEnumerator TransScene(string scene, float interval)
     {
-        //‚¾‚ñ‚¾‚ñˆÃ‚­ .
+        //ã ã‚“ã ã‚“æš—ã .
         float time = 0;
         while (time <= interval)
         {
@@ -47,10 +49,10 @@ public class FadeManager : MonoBehaviour
         }
         sprite.color = new Color(0f, 0f, 0f, 1f);
 
-        //ƒV[ƒ“Ø‘Ö .
+        //ã‚·ãƒ¼ãƒ³åˆ‡æ›¿ .
         SceneManager.LoadScene(scene);
         
-        //‚¾‚ñ‚¾‚ñ–¾‚é‚­ .
+        //ã ã‚“ã ã‚“æ˜ã‚‹ã .
         time = 0;
         while (time <= interval)
         {
