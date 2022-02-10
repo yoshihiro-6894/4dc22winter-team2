@@ -1,12 +1,12 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody rb;
-    public int maxHP = 100;     //HP100‚Æ‚µ‚Ä‚Ğ‚Æ‚Ü‚¸İ’è
+    public int maxHP = 100;     //HP100ã¨ã—ã¦ã²ã¨ã¾ãšè¨­å®š
     private int hp;
     bool isDeath;
     private bool moveEnabled = true;
@@ -20,15 +20,18 @@ using UnityEngine;
         rb = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerEnter(Collider other)     //”íƒ_ƒ[ƒW‚ÉŠÖ‚·‚éˆ—
+    /*
+    private void OnTriggerEnter(Collider other)     //è¢«ãƒ€ãƒ¡ãƒ¼ã‚¸ã«é–¢ã™ã‚‹å‡¦ç†
     {
         Damager damager = other.GetComponent<Damager>();
         if (damager != null)
         {
-            animator.SetTrigger("Gethit");       //ƒvƒŒƒCƒ„[‚ÌŒ•‚ª“–‚½‚Á‚½‚çƒ_ƒ[ƒWƒAƒjƒ[ƒVƒ‡ƒ“”­¶
+            animator.SetTrigger("Gethit");       //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å‰£ãŒå½“ãŸã£ãŸã‚‰ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ç™ºç”Ÿ
             Damage(damager.damage);
         }
     }
+    */
+
     // Update is called once per frame
     void Damage(int damage)
     {
@@ -37,7 +40,7 @@ using UnityEngine;
         {
             hp = 0;
             animator.SetTrigger("Death");
-            Destroy(gameObject, 5f);@@@//“|‚ê‚½Œã‚ÉƒV[ƒ“‚©‚çÁ–Å‚³‚¹‚é
+            Destroy(gameObject, 5f);ã€€ã€€ã€€//å€’ã‚ŒãŸå¾Œã«ã‚·ãƒ¼ãƒ³ã‹ã‚‰æ¶ˆæ»…ã•ã›ã‚‹
         }
     }
 }
