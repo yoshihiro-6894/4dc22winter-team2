@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,7 +18,7 @@ public class UnitManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ���炩�̃{�^���������ꂽ�ꍇ�͎~�߂�
+        // 何らかのボタンが押された場合は止める
         if (EventSystem.current.currentSelectedGameObject != null)
         {
             return;
@@ -29,6 +29,7 @@ public class UnitManager : MonoBehaviour
             mousePos.z = 10;
             Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
             SelectedUnit = null;
+            //コスト周りの実装をしないといけない
         }
     }
 }
