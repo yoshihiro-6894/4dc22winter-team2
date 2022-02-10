@@ -9,10 +9,12 @@ public class UnitManager : MonoBehaviour
 
     private Vector3 mousePos;
 
+  
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,8 +30,10 @@ public class UnitManager : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos.z = 10;
             Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
+            
+
             SelectedUnit = null;
-            //コスト周りの実装をしないといけない
+            
         }
     }
 }
