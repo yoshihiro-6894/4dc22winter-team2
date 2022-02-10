@@ -5,15 +5,16 @@ using UnityEngine;
 public class UnitButton : MonoBehaviour
 {
     public GameObject UnitData;
-    // Start is called before the first frame update
-    void Start()
+
+    public GameObject manager;
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CopyUnitData()
     {
-        
+        manager.GetComponent<UnitManager>().SelectedUnit = UnitData;
     }
 }
