@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DurationTime: 0
-  Cost: 0
+  Cost: 20
   Atk: 0
   AttackInterval: 0
