@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
  //カウントアップ
-    private float countup = 10.0f;
+    public float count = 10.0f;
  
     //タイムリミット
     public float timeLimit = 0.0f;
@@ -18,12 +18,12 @@ public class Timer : MonoBehaviour
     void Update()
     {
         //時間をカウントする
-        countup -= Time.deltaTime;
+        count -= Time.deltaTime;
  
         //時間を表示する
-        timeText.text = countup.ToString("f2") + "秒";
+        timeText.text = count.ToString("f2") + "秒";
  
-        if(countup <= timeLimit)
+        if(count <= timeLimit)
         {
             timeText.text = "時間になりました！";
         }
