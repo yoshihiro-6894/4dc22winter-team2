@@ -6,15 +6,17 @@ public class UnitButton : MonoBehaviour
 {
     public GameObject UnitData;
 
-    public GameObject manager;
+    public GameObject Unitmanager;
+
+    public int Cost;
 
     private void Start()
     {
-        
+        Cost = UnitData.GetComponent<Unit>().Cost;
     }
 
     public void CopyUnitData()
     {
-        manager.GetComponent<UnitManager>().SelectedUnit = UnitData;
+        Unitmanager.GetComponent<UnitManager>().SelectedUnit = UnitData;
     }
 }
