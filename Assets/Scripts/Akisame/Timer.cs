@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
  //カウントアップ
-    private float countup = 0.0f;
+    private float countup = 10.0f;
  
     //タイムリミット
-    public float timeLimit = 5.0f;
+    public float timeLimit = 0.0f;
  
     //時間を表示するText型の変数
     public Text timeText;
@@ -18,12 +18,12 @@ public class Timer : MonoBehaviour
     void Update()
     {
         //時間をカウントする
-        countup += Time.deltaTime;
+        countup -= Time.deltaTime;
  
         //時間を表示する
-        timeText.text = countup.ToString("f1") + "秒";
+        timeText.text = countup.ToString("f2") + "秒";
  
-        if(countup >= timeLimit)
+        if(countup <= timeLimit)
         {
             timeText.text = "時間になりました！";
         }
