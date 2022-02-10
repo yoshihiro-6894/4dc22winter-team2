@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class FadeManager : MonoBehaviour
 {
     public Image sprite;
+    public GameObject canvas;
 
     public static FadeManager Instance = null;
     private void Awake()
@@ -18,6 +19,7 @@ public class FadeManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
+        
     }
 
 
@@ -39,6 +41,7 @@ public class FadeManager : MonoBehaviour
     /// <returns></returns>
     private IEnumerator TransScene(string scene, float interval)
     {
+        canvas.SetActive(true);
         //だんだん暗く .
         float time = 0;
         while (time <= interval)
@@ -61,5 +64,6 @@ public class FadeManager : MonoBehaviour
             yield return null;
         }
         sprite.color = new Color(0f, 0f, 0f, 0f);
+        canvas.SetActive(false);
     }
 }
