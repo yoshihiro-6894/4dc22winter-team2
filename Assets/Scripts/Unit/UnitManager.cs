@@ -7,9 +7,9 @@ public class UnitManager : MonoBehaviour
 {
     public GameObject SelectedUnit;
 
-    private Vector3 mousePos;
+    public CostManager costmanager;
 
-  
+    private Vector3 mousePos;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class UnitManager : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos.z = 10;
             Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
-            
+            costmanager.DownPoint(SelectedUnit.GetComponent<Unit>().Cost);
 
             SelectedUnit = null;
             

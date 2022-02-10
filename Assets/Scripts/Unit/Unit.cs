@@ -16,5 +16,7 @@ public class Unit : MonoBehaviour
     [Header("攻撃間隔秒数")]
     public float AttackInterval;
 
+    [Header("クールタイム")]
+    public float CoolTime;
 
 }

@@ -99,3 +99,4 @@ MonoBehaviour:
   Cost: 10
   Atk: 0
   AttackInterval: 0
+  CoolTime: 1
