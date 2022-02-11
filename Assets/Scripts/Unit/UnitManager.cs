@@ -34,11 +34,19 @@ public class UnitManager : MonoBehaviour
         {
             mousePos = Input.mousePosition;
             mousePos.z = 10;
-            Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
-            costmanager.DownPoint(SelectedUnit.GetComponent<Unit>().Cost);
-            UnitPlaced = true;
-            SelectedUnit = null;
-            
+
+            RaycastHit2D hit = Physics2D.CircleCast(Camera.main.ScreenToWorldPoint(mousePos), 0.1f, Vector2.up);
+
+            if(!hit)
+            {
+                GameObject g = Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
+                RegisterObject ro = g.GetComponent<RegisterObject>();
+                ro.Init();
+
+                costmanager.DownPoint(SelectedUnit.GetComponent<Unit>().Cost);
+                UnitPlaced = true;
+                SelectedUnit = null;
+            }
         }
     }
 }

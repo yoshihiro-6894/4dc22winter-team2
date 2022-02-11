@@ -41,7 +41,7 @@ public class MoveAlongLattice : MonoBehaviour
 
     private IEnumerator tryMove(Vector2Int dir)
     {
-        if(dir != restrictDirection && registerObject.latticeField.Exists(registerObject.LatticePosition + dir))
+        if(dir != restrictDirection && registerObject.Moveable(dir))
         {
             restrictDirection = -dir;
             yield return MoveTo(dir, 1 / timer);

@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: 0, y: 2}
+  latticeField: {fileID: 0}
 --- !u!4 &12690875
 Transform:
   m_ObjectHideFlags: 0
@@ -233,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f64c2b59cd85983bfad92e935bb79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
 --- !u!1 &289941076
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: -1, y: -1}
+  latticeField: {fileID: 0}
 --- !u!212 &289941078
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -362,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: 1, y: 2}
+  latticeField: {fileID: 0}
 --- !u!212 &475384805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -599,6 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: -1, y: 0}
+  latticeField: {fileID: 0}
 --- !u!212 &822461365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -696,6 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: 0, y: 3}
+  latticeField: {fileID: 0}
 --- !u!212 &899196211
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -793,6 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: -1, y: 1}
+  latticeField: {fileID: 0}
 --- !u!212 &960770450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -890,6 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: 1, y: 1}
+  latticeField: {fileID: 0}
 --- !u!212 &1252241793
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -987,6 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: 1, y: -2}
+  latticeField: {fileID: 0}
 --- !u!212 &1381444579
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1084,6 +1093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: 1, y: 0}
+  latticeField: {fileID: 0}
 --- !u!212 &1855325252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1181,6 +1191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: -1, y: 2}
+  latticeField: {fileID: 0}
 --- !u!212 &1856232303
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1278,6 +1289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LatticeSystem: {fileID: 555079257}
   latticePosition: {x: 0, y: -2}
+  latticeField: {fileID: 0}
 --- !u!212 &1874912599
 SpriteRenderer:
   m_ObjectHideFlags: 0
