@@ -4,32 +4,22 @@ using UnityEngine;
 
 public class LatticeField : MonoBehaviour
 {
-    [SerializeField] private Camera displayCamera;
+    [SerializeField] private Vector2 latticeWidth; 
 
-    [SerializeField] private Vector2Int lattice; 
+    private Dictionary<Vector2Int, GameObject> latticeObjects;
 
-    private GameObject[,] latticeObjects;
-
-    private Position2Lattice position2Lattice;
-
-    //static private Vector2 latticeSize = new Vector2(Screen.width / lattice.x, Screen.height / lattice.y);
+    public Position2Lattice position2Lattice;
 
     void Awake()
     {
-        position2Lattice = new Position2Lattice(lattice, new Vector2(Screen.width, Screen.height));
+        position2Lattice = new Position2Lattice(latticeWidth); 
 
-        latticeObjects = new GameObject[lattice.x, lattice.y];
-        //latticeSize = new Vector2(Screen.width / lattice.x, Screen.height / lattice.y); 
+        latticeObjects = new Dictionary<Vector2Int, GameObject>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < lattice.x; i++) {
-            for(int j = 0; j < lattice.y; j++) {
-                latticeObjects[i, j] = null;
-            }
-        }
     }
 
     // Update is called once per frame
@@ -41,7 +31,20 @@ public class LatticeField : MonoBehaviour
     public void SetObject(GameObject g)
     {
         Vector2Int pos = position2Lattice.GetLatticePosition(g.transform.position);
-        latticeObjects[pos.x, pos.y] = g;
+        SetObject(g, pos);
     }
 
+    public void SetObject(GameObject g, Vector2Int pos)
+    {
+        latticeObjects.Add(pos, g);
+    }
+
+    public void SetPos(GameObject g, Vector2Int latticePos)
+    {
+        g.transform.position = new Vector3(
+            latticePos.x * position2Lattice.latticeWidth.x,
+            latticePos.y * position2Lattice.latticeWidth.y,
+            0
+        );
+    }
 }
