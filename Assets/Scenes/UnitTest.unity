@@ -448,7 +448,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxCostPoint: 200
-  nowCostPoint: 0
   ChargeSpeed: 1
   UItext: {fileID: 2026755976}
 --- !u!4 &868258129
@@ -458,12 +457,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868258127}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922350179
 GameObject:
@@ -663,7 +662,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1135512123
 MonoBehaviour:
@@ -733,7 +732,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitData: {fileID: 2452406452557605199, guid: 65919aefced82164a94afd9e9503a9dd, type: 3}
-  manager: {fileID: 2104181085}
+  Unitmanager: {fileID: 2104181085}
+  Cost: 0
 --- !u!114 &1348446847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,7 +960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitData: {fileID: 3268240959985627565, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-  manager: {fileID: 2104181085}
+  Unitmanager: {fileID: 2104181085}
+  Cost: 0
 --- !u!114 &1459251453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,10 +1371,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104181085}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 391.6987, y: 145.23177, z: -28.911575}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
