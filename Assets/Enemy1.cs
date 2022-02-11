@@ -6,7 +6,7 @@ public class Enemy1 : MonoBehaviour
 {
     public int hp;
     public float speed;
-    public Route route;
+    //public Route route;
 
     // Start is called before the first frame update
     void Start()
