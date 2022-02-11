@@ -15,7 +15,7 @@ public class SearchEnemy : MonoBehaviour
     void Update()
     {
         
-        RaycastHit2D[] hit = Physics2D.CircleCastAll(transform.position, SearchRange, Vector2.up, Mathf.Infinity, 7);
+        RaycastHit2D[] hit = Physics2D.CircleCastAll(transform.position, SearchRange, Vector2.zero, Mathf.Infinity, 1 << 7);
 
         foreach(var h in hit)
         {

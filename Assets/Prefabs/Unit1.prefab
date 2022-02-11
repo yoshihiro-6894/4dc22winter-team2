@@ -128,4 +128,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef6157977136c1f183b65c76ab10ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SearchRange: 1
+  SearchRange: 2
