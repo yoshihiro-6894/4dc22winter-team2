@@ -38,9 +38,9 @@ public class LatticeField : MonoBehaviour
         
     }
 
-    void SetObject(gameObject g)
+    public void SetObject(GameObject g)
     {
-        Vector2Int pos = GetLatticePosition(g.transform.position)
+        Vector2Int pos = position2Lattice.GetLatticePosition(g.transform.position);
         latticeObjects[pos.x, pos.y] = g;
     }
 
