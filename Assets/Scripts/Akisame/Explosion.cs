@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    //音声用
     public AudioClip ExplosionSE;
     AudioSource audioSource;
+    //破壊用
+    public GameObject DeExplosion;
+    public float ExplosionCount = 5.0f;
+    public float ExplosionDestroy = 0.0f;
 
     void Start () {
         //Componentを取得
@@ -14,6 +19,11 @@ public class Explosion : MonoBehaviour
     }
 
     void Update () {
-
+        // 破壊用
+        ExplosionCount -= Time.deltaTime;
+        if(ExplosionCount <= ExplosionDestroy)
+        {
+            Destroy(DeExplosion);
+        }
     }
 }
