@@ -7,8 +7,8 @@ public class Explosion : MonoBehaviour
     //音声用
     public AudioClip ExplosionSE;
     AudioSource audioSource;
-    //破壊用
-    public GameObject DeExplosion;
+
+
     public float ExplosionCount = 5.0f;
     public float ExplosionDestroy = 0.0f;
 
@@ -23,7 +23,7 @@ public class Explosion : MonoBehaviour
         ExplosionCount -= Time.deltaTime;
         if(ExplosionCount <= ExplosionDestroy)
         {
-            Destroy(DeExplosion);
+            Destroy(this.gameObject);
         }
     }
 }
