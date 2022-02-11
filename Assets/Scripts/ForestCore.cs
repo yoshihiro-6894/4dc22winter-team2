@@ -19,6 +19,8 @@ public class ForestCore : MonoBehaviour
 
     public Animator animator;
 
+    bool FinishGame = false;
+
     private void Start()
     {
         Hp = MaxHp;
@@ -35,14 +37,22 @@ public class ForestCore : MonoBehaviour
         Hp -= damage;
         HpUItext.text = "HP  "+Hp.ToString("d3") + "/" + MaxHp.ToString();
         HpBar.value = 100.0f * Hp / MaxHp;
+
+        if (Hp <= 0 && !FinishGame)
+        {
+            FinishGame = true;
+            FadeManager.Instance.LoadScene("GameOver", 2f, false);
+        }
     }
 
     private void Update()
     {
-        if (timer.count <= 0)
+        if (timer.count <= 0 && !FinishGame)
         {
+            FinishGame = true;
             MeiyoBeam.SetActive(true);
             animator.SetTrigger("MeiyoBeam");
+            FadeManager.Instance.LoadScene("GameClear", 3f, true);
         }
     }
 }

@@ -21,11 +21,17 @@ public class Timer : MonoBehaviour
         count -= Time.deltaTime;
  
         //時間を表示する
-        timeText.text = count.ToString("f2") + "秒";
+        timeText.text = count.ToString("f2");
+
+
+        if (count <= 10.0f)
+        {
+            timeText.color = new Color(240, 0, 0);
+        }
  
         if(count <= timeLimit)
         {
-            timeText.text = "時間になりました！";
+            timeText.text = 0.ToString("f2");
         }
     }
 }
