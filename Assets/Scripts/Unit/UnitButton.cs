@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UnitButton : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class UnitButton : MonoBehaviour
     public UnitManager Unitmanager;
 
     public CostManager costmanager;
+
+    public Slider cooltimebar;
+
+    public Text CostText;
 
     public int RequireCost;
 
@@ -27,6 +32,7 @@ public class UnitButton : MonoBehaviour
     {
         RequireCost = UnitData.GetComponent<Unit>().Cost;
         coolTime = UnitData.GetComponent<Unit>().CoolTime;
+        CostText.text = RequireCost.ToString();
         ChangeInteractable(false);
     }
 
@@ -37,11 +43,14 @@ public class UnitButton : MonoBehaviour
             if (time < coolTime)
             {
                 time += 1 * Time.deltaTime;
+                cooltimebar.value = time / coolTime * 100;
             }
             else
             {
                 time = 0;
+                cooltimebar.value = time / coolTime * 100;
                 isCoolTime = false;
+                cooltimebar.gameObject.SetActive(false);
             }
         }
         else
@@ -61,9 +70,16 @@ public class UnitButton : MonoBehaviour
         {
             ChangAble = false;
             isCoolTime = true;
+            cooltimebar.gameObject.SetActive(true);
+            Debug.Log(UnitData + "のクールタイムがオン");
             ChangeInteractable(false);
             Unitmanager.UnitPlaced = false;
         }
+
+        if (Unitmanager.SelectedUnit == UnitData)
+            ChangAble = true;
+        else
+            ChangAble = false;
     }
 
 
@@ -73,7 +89,6 @@ public class UnitButton : MonoBehaviour
     public void CopyUnitData()
     {
         Unitmanager.SelectedUnit = UnitData;
-        ChangAble = true;
     }
 
     private void ChangeInteractable(bool change)

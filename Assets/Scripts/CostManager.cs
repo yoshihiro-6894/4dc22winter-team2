@@ -14,13 +14,14 @@ public class CostManager : MonoBehaviour
 
     public Text UItext;
 
+    public Slider CostBar;
+
     // Start is called before the first frame update
     void Start()
     {
         nowCostPoint = 0;
         UInowCostPoint = 0;
-        UItext.text = UInowCostPoint.ToString() + "/" + MaxCostPoint.ToString();
-
+        SetValueToUI();
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class CostManager : MonoBehaviour
 
         UInowCostPoint = (int)nowCostPoint;
 
-        UItext.text = UInowCostPoint.ToString() + "/" + MaxCostPoint.ToString();
+        SetValueToUI();
     }
 
     public void AddPoint(int AddValue)
@@ -50,7 +51,7 @@ public class CostManager : MonoBehaviour
 
         UInowCostPoint = (int)nowCostPoint;
 
-        UItext.text = UInowCostPoint.ToString() + "/" + MaxCostPoint.ToString();
+        SetValueToUI();
     }
 
     public void DownPoint(int DownValue)
@@ -62,6 +63,12 @@ public class CostManager : MonoBehaviour
 
         UInowCostPoint = (int)nowCostPoint;
 
-        UItext.text = UInowCostPoint.ToString() + "/" + MaxCostPoint.ToString();
+        SetValueToUI();
+    }
+
+    void SetValueToUI()
+    {
+        UItext.text = "MEIYO   "+UInowCostPoint.ToString("d3") + "/" + MaxCostPoint.ToString()+" P";
+        CostBar.value = nowCostPoint / MaxCostPoint * 100;
     }
 }
