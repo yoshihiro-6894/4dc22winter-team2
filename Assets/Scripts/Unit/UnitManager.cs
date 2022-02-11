@@ -11,6 +11,11 @@ public class UnitManager : MonoBehaviour
 
     private Vector3 mousePos;
 
+    /// <summary>
+    /// 選択したユニットを置いたかどうか
+    /// </summary>
+    public bool UnitPlaced;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +36,7 @@ public class UnitManager : MonoBehaviour
             mousePos.z = 10;
             Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
             costmanager.DownPoint(SelectedUnit.GetComponent<Unit>().Cost);
-
+            UnitPlaced = true;
             SelectedUnit = null;
             
         }

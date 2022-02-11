@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,8 +16,12 @@ public class UnitButton : MonoBehaviour
     public float coolTime;
     private float time = 0;
 
+    /// <summary>クールタイムかどうか</summary>
     public bool isCoolTime;
+    /// <summary>召喚できるか</summary>
     public bool AbleSummon;
+
+    public bool ChangAble;
 
     private void Start()
     {
@@ -52,11 +56,24 @@ public class UnitButton : MonoBehaviour
                 ChangeInteractable(false);
             }
         }
+
+        if (ChangAble && Unitmanager.UnitPlaced)
+        {
+            ChangAble = false;
+            isCoolTime = true;
+            ChangeInteractable(false);
+            Unitmanager.UnitPlaced = false;
+        }
     }
 
+
+    /// <summary>
+    /// Buttonが押されたときに呼び出される関数
+    /// </summary>
     public void CopyUnitData()
     {
         Unitmanager.SelectedUnit = UnitData;
+        ChangAble = true;
     }
 
     private void ChangeInteractable(bool change)

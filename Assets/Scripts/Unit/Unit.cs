@@ -19,4 +19,15 @@ public class Unit : MonoBehaviour
     [Header("クールタイム")]
     public float CoolTime;
 
+    private float time = 0;
+
+    protected virtual void Update()
+    {
+        time += Time.deltaTime;
+
+        if (time >= DurationTime)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
