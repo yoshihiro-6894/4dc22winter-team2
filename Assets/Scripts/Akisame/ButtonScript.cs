@@ -7,10 +7,19 @@ public class ButtonScript : MonoBehaviour {
 
     public float transSecond;
 
-    public bool iswhite = true;
+    [Header("On:白  Off:黒 でシーン遷移")]public bool iswhite = true;
+
+    public AudioSource audiosource;
+
+    private void Start()
+    {
+        audiosource = GetComponent<AudioSource>();
+    }
+
     // ボタンが押された場合、今回呼び出される関数
     public void OnClick()
     {
+        audiosource.Play();
         FadeManager.Instance.LoadScene(next,transSecond,iswhite);
     }
 }
