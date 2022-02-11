@@ -448,6 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxCostPoint: 200
+  nowCostPoint: 0
   ChargeSpeed: 1
   UItext: {fileID: 2026755976}
 --- !u!4 &868258129
@@ -732,8 +733,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitData: {fileID: 2452406452557605199, guid: 65919aefced82164a94afd9e9503a9dd, type: 3}
-  Unitmanager: {fileID: 2104181085}
-  Cost: 0
+  Unitmanager: {fileID: 2104181086}
+  costmanager: {fileID: 868258128}
+  RequireCost: 0
+  coolTime: 0
+  isCoolTime: 0
+  AbleSummon: 0
 --- !u!114 &1348446847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,8 +965,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitData: {fileID: 3268240959985627565, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-  Unitmanager: {fileID: 2104181085}
-  Cost: 0
+  Unitmanager: {fileID: 2104181086}
+  costmanager: {fileID: 868258128}
+  RequireCost: 0
+  coolTime: 0
+  isCoolTime: 0
+  AbleSummon: 0
 --- !u!114 &1459251453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1364,6 +1373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedUnit: {fileID: 0}
+  costmanager: {fileID: 868258128}
 --- !u!4 &2104181087
 Transform:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class CostManager : MonoBehaviour
 {
     public float MaxCostPoint = 200;
 
-    private float nowCostPoint;
+    public float nowCostPoint;
     private int UInowCostPoint;
 
     [Header("コストのチャージスピード")]public float ChargeSpeed;
