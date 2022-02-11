@@ -19,7 +19,7 @@ public class SearchEnemy : MonoBehaviour
 
         foreach(var h in hit)
         {
-            Debug.Log("enemy exist!" + h.collider.name);
+            //Debug.Log("enemy exist!" + h.collider.name);
         }
     }
 }
