@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e88d05eaeb44ac8ac1bdd8794ffaae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next: Akisame
+  next: StageScene
   transSecond: 1
   iswhite: 0
   audiosource: {fileID: 422944433}
