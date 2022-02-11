@@ -32,7 +32,7 @@ public class RegisterObject : MonoBehaviour
         }
     }
 
-    private LatticeField latticeField;
+    public LatticeField latticeField;
 
     private Position2Lattice position2Lattice;
 
