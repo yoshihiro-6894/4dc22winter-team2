@@ -7,9 +7,14 @@ public class UnitManager : MonoBehaviour
 {
     public GameObject SelectedUnit;
 
+    public CostManager costmanager;
+
     private Vector3 mousePos;
 
-  
+    /// <summary>
+    /// 選択したユニットを置いたかどうか
+    /// </summary>
+    public bool UnitPlaced;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +35,8 @@ public class UnitManager : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos.z = 10;
             Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
-            
-
+            costmanager.DownPoint(SelectedUnit.GetComponent<Unit>().Cost);
+            UnitPlaced = true;
             SelectedUnit = null;
             
         }
