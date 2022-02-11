@@ -16,13 +16,25 @@ public class MoveAlongLattice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        registerObject.MoveTo(Vector2Int.up);
+        if(registerObject.Moveable(Vector2Int.right))
+        {
+            registerObject.MoveTo(new Vector2Int(1, 0));
+        }
+        if(registerObject.Moveable(Vector2Int.right))
+        {
+            registerObject.MoveTo(new Vector2Int(1, 0));
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void searchMove()
+    {
     }
 
 }

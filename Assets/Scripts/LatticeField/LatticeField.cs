@@ -12,14 +12,17 @@ public class LatticeField : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    public bool Exists(Vector2Int pos)
+    {
+        return latticeObjects.Contains(pos);
     }
 
     public bool SetObject(Vector2Int pos)

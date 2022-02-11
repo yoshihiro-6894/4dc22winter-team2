@@ -12,10 +12,9 @@ public class Position2Lattice : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(latticeWidth);
     }
 
-    public Vector2Int GetLatticePosition(Vector2 pos)
+    public Vector2Int GetLatticePosition(Vector3 pos)
     {
         return new Vector2Int((int)(pos.x / LatticeWidth.x), (int)(pos.y / LatticeWidth.y));
     }

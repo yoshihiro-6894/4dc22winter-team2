@@ -13,19 +13,18 @@ public class RegisterObject : MonoBehaviour
 
     private Position2Lattice position2Lattice;
 
-
     void Awake()
     {
         latticeField = LatticeSystem.GetComponent<LatticeField>();
 
         position2Lattice = LatticeSystem.GetComponent<Position2Lattice>();
+
+        SetPos(latticePosition);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        SetPos(latticePosition);
-
         latticeField.SetObject(latticePosition);
     }
 
@@ -42,9 +41,17 @@ public class RegisterObject : MonoBehaviour
         latticeField.RemoveObject(latticePosition);
     }
 
+    public bool Moveable(Vector2Int dir) 
+    {
+        if(latticeField.Exists(position2Lattice.GetLatticePosition(transform.position) + dir))
+        {
+            return false;
+        }
+        return true;
+    }
+
     public void SetPos(Vector2Int latticePos)
     {
-        Debug.Log(latticePos);
         transform.position = new Vector3(
             latticePos.x * position2Lattice.LatticeWidth.x,
             latticePos.y * position2Lattice.LatticeWidth.y,
