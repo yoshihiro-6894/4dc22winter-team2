@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   next: Akisame
   transSecond: 1
+  iswhite: 0
 --- !u!114 &422944430
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,9 @@ public class FadeManager : MonoBehaviour
     public GameObject canvas;
 
     public static FadeManager Instance = null;
+
+    private float colorNum;
+
     private void Awake()
     {
         if (Instance != null)
@@ -28,8 +31,13 @@ public class FadeManager : MonoBehaviour
     /// </summary>
     /// <param name="scene">遷移先のシーン名</param>
     /// <param name="interval">暗転の秒数</param>
-    public void LoadScene(string scene, float interval)
+    /// <param name="isWhite">"true:白くなって遷移, false:黒くなって遷移"</param>
+    public void LoadScene(string scene, float interval,bool isWhite)
     {
+        if (isWhite)
+            colorNum = 255f;
+        else
+            colorNum = 0f;
         StartCoroutine(TransScene(scene, interval));
     }
 
@@ -46,11 +54,11 @@ public class FadeManager : MonoBehaviour
         float time = 0;
         while (time <= interval)
         {
-            sprite.color = new Color(0f, 0f, 0f, time / interval);
+            sprite.color = new Color(colorNum, colorNum, colorNum, time / interval);
             time += Time.deltaTime;
             yield return null;
         }
-        sprite.color = new Color(0f, 0f, 0f, 1f);
+        sprite.color = new Color(colorNum, colorNum, colorNum, 1f);
 
         //シーン切替 .
         SceneManager.LoadScene(scene);
@@ -59,11 +67,11 @@ public class FadeManager : MonoBehaviour
         time = 0;
         while (time <= interval)
         {
-            sprite.color = new Color(0f, 0f, 0f, 1 - time / interval);
+            sprite.color = new Color(colorNum, colorNum, colorNum, 1 - time / interval);
             time += Time.deltaTime;
             yield return null;
         }
-        sprite.color = new Color(0f, 0f, 0f, 0f);
+        sprite.color = new Color(colorNum, colorNum, colorNum, 0f);
         canvas.SetActive(false);
     }
 }
