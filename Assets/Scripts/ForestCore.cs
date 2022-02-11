@@ -11,10 +11,13 @@ public class ForestCore : MonoBehaviour
 
     public Text HpUItext;
 
+    public Slider HpBar;
+
     private void Start()
     {
         Hp = MaxHp;
         HpUItext.text = Hp.ToString() + "/" + MaxHp.ToString();
+        HpBar.value = Hp / MaxHp * 100;
     }
 
     /// <summary>
@@ -25,6 +28,7 @@ public class ForestCore : MonoBehaviour
     {
         Hp -= damage;
         HpUItext.text = Hp.ToString() + "/" + MaxHp.ToString();
+        HpBar.value = Hp / MaxHp * 100;
     }
 
     private void Update()
