@@ -7,7 +7,30 @@ public class RegisterObject : MonoBehaviour
 {
     [SerializeField] private GameObject LatticeSystem;
 
-    [SerializeField] public Vector2Int latticePosition = Vector2Int.zero;
+    [SerializeField] private Vector2Int latticePosition = Vector2Int.zero;
+
+    public Vector2Int LatticePosition 
+    {
+        get 
+        {
+            return latticePosition;
+        }
+        set 
+        {
+            if(!latticeField.Exists(value))
+            {
+                Debug.Log("set!");
+                latticeField.RemoveObject(latticePosition);
+                latticeField.SetObject(value);
+                latticePosition = value;
+                transform.position = position2Lattice.GetWorldPosition(latticePosition);
+            }
+            else
+            {
+                Debug.Log("stay!");
+            }
+        }
+    }
 
     private LatticeField latticeField;
 
