@@ -22,12 +22,19 @@ public class LatticeField : MonoBehaviour
 
     public bool Exists(Vector2Int pos)
     {
-        return latticeObjects.Contains(pos);
+        foreach (var l in latticeObjects)
+        {
+            if(l.x == pos.x && l.y == pos.y)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public bool SetObject(Vector2Int pos)
     {
-        if(latticeObjects.Contains(pos))
+        if(Exists(pos))
         {
             return false;
         }
