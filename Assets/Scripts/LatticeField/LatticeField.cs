@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class LatticeField : MonoBehaviour
 {
-    [SerializeField] private Vector2 latticeWidth; 
-
-    private Dictionary<Vector2Int, GameObject> latticeObjects;
-
-    public Position2Lattice position2Lattice;
+    private List<Vector2Int> latticeObjects;
 
     void Awake()
     {
-        position2Lattice = new Position2Lattice(latticeWidth); 
-
-        latticeObjects = new Dictionary<Vector2Int, GameObject>();
+        latticeObjects = new List<Vector2Int>();
     }
 
     // Start is called before the first frame update
@@ -28,23 +22,19 @@ public class LatticeField : MonoBehaviour
         
     }
 
-    public void SetObject(GameObject g)
+    public bool SetObject(Vector2Int pos)
     {
-        Vector2Int pos = position2Lattice.GetLatticePosition(g.transform.position);
-        SetObject(g, pos);
+        if(latticeObjects.Contains(pos))
+        {
+            return false;
+        }
+        latticeObjects.Add(pos);
+        return true;
     }
 
-    public void SetObject(GameObject g, Vector2Int pos)
+    public void RemoveObject(Vector2Int latticePos)
     {
-        latticeObjects.Add(pos, g);
+        latticeObjects.Remove(latticePos);
     }
 
-    public void SetPos(GameObject g, Vector2Int latticePos)
-    {
-        g.transform.position = new Vector3(
-            latticePos.x * position2Lattice.latticeWidth.x,
-            latticePos.y * position2Lattice.latticeWidth.y,
-            0
-        );
-    }
 }

@@ -3,19 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Position2Lattice
+public class Position2Lattice : MonoBehaviour
 {
-    // 16:9とか
-    public Vector2 latticeWidth { get; private set; }
+    // 16:9とかじゃないです
+    public Vector2 LatticeWidth { get { return latticeWidth; } private set { latticeWidth = value; } }
 
-    public Position2Lattice(Vector2 w)    
+    [SerializeField] private Vector2 latticeWidth;
+
+    void Start()
     {
-        latticeWidth = w; 
+        Debug.Log(latticeWidth);
     }
 
     public Vector2Int GetLatticePosition(Vector2 pos)
     {
-        return new Vector2Int((int)(pos.x / latticeWidth.x), (int)(pos.y / latticeWidth.y));
+        return new Vector2Int((int)(pos.x / LatticeWidth.x), (int)(pos.y / LatticeWidth.y));
+    }
+
+    public Vector3 GetWorldPosition(Vector2Int pos)
+    {
+        return new Vector3(
+            pos.x * LatticeWidth.x,
+            pos.y * LatticeWidth.y,
+            0
+        );
     }
 
 }
