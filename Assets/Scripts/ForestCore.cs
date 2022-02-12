@@ -53,7 +53,7 @@ public class ForestCore : MonoBehaviour
             MeiyoBeam.SetActive(true);
             animator.SetTrigger("MeiyoBeam");
 
-            FadeManager.Instance.LoadScene("GameOver", 3f, true);
+            FadeManager.Instance.LoadScene("GameClear", 3f, true);
         }
     }
 }
