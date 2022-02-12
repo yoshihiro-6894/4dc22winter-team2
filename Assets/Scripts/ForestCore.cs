@@ -55,5 +55,10 @@ public class ForestCore : MonoBehaviour
 
             FadeManager.Instance.LoadScene("GameClear", 3f, true);
         }
+        if (Hp <= 0 && !Finished)
+        {
+            Finished = true;
+            FadeManager.Instance.LoadScene("GameOver", 1f, false);
+        }
     }
 }
