@@ -605,54 +605,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71a3152877e88e327a572c4ce00bdebf, type: 3}
---- !u!1 &207576770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 207576772}
-  - component: {fileID: 207576771}
-  m_Layer: 0
-  m_Name: Costmanager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &207576771
+--- !u!114 &207576771 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1144206604256244699, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+  m_PrefabInstance: {fileID: 1144206604317895960}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207576770}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2fab72d315c44c9b07098d4ab4eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxCostPoint: 200
-  nowCostPoint: 10
-  ChargeSpeed: 5
-  UItext: {fileID: 1436846768}
-  CostBar: {fileID: 1344987149}
---- !u!4 &207576772
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207576770}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &242652636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -759,7 +722,7 @@ MonoBehaviour:
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: -8, y: 0}
   MoveDirection: {x: 0.5, y: 0}
-  timer: 3
+  timer: 5
 --- !u!114 &245181575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,7 +738,7 @@ MonoBehaviour:
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: 0, y: 6}
   MoveDirection: {x: 0, y: -0.25}
-  timer: 9
+  timer: 12
 --- !u!114 &245181576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,7 +754,7 @@ MonoBehaviour:
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: 8, y: 0}
   MoveDirection: {x: -0.5, y: 0}
-  timer: 4
+  timer: 6
 --- !u!4 &271753769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3727552730873862501, guid: 71a3152877e88e327a572c4ce00bdebf, type: 3}
@@ -5614,3 +5577,72 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1144206604317895960
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1144206604256244698, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_Name
+      value: Costmanager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244699, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: UItext
+      value: 
+      objectReference: {fileID: 1436846768}
+    - target: {fileID: 1144206604256244699, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: CostBar
+      value: 
+      objectReference: {fileID: 1344987149}
+    - target: {fileID: 1144206604256244699, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: nowCostPoint
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144206604256244700, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}

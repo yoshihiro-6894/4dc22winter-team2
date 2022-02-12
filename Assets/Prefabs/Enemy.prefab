@@ -137,8 +137,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 9118909860939352249}
   Effect: {fileID: 6131974601236057837, guid: 519059693c77d8f44878e56373db280e, type: 3}
+  costmaanger: {fileID: 1144206604256244699, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
   hp: 3
   atk: 10
+  reward: 10
 --- !u!95 &9118909860939352249
 Animator:
   serializedVersion: 3

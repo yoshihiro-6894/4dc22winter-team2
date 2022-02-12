@@ -10,7 +10,7 @@ public class MakeEnemy : MonoBehaviour
 
     [SerializeField] private Vector2 MoveDirection;
 
-    [SerializeField] private float timer;
+    [Header("ê∂ê¨ä‘äu"),SerializeField] private float timer;
     // Start is called before the first frame update
     void Start()
     {

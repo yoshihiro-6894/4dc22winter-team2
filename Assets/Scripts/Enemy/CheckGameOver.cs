@@ -10,11 +10,16 @@ public class CheckGameOver : MonoBehaviour
 
     public GameObject Effect;
 
+    public CostManager costmaanger;
+
+    public ForestCore forestcore;
     public int hp;
 
     public int atk;
 
     int count = 0;
+
+    public float reward = 10;
 
     void Awake()
     {
@@ -24,8 +29,8 @@ public class CheckGameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        
+        costmaanger = FindObjectOfType<CostManager>();
+        forestcore = FindObjectOfType<ForestCore>();
     }
 
     // Update is called once per frame
@@ -51,7 +56,7 @@ public class CheckGameOver : MonoBehaviour
             rigidbody2d.velocity = Vector2.zero;
             animator.SetTrigger("Explosion");
             Instantiate(Effect, transform.position, Quaternion.identity);
-            
+            forestcore.OnDamage(atk);
             Destroy(gameObject, 1.0f);
         }
     }
@@ -61,7 +66,12 @@ public class CheckGameOver : MonoBehaviour
         hp -= damage;
         if (hp <= 0)
         {
-            Destroy(this.gameObject);
+            costmaanger.AddPoint(reward);
+            Debug.Log("•ñV‚ð‰Á‚¦‚Ü‚µ‚½I");
+            rigidbody2d.velocity = Vector2.zero;
+            
+
+            Destroy(this.gameObject,1.0f);
         }
     }
 }

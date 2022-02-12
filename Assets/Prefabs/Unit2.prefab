@@ -100,15 +100,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d78b702e0b1ca40b6ccfadb32bf9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DurationTime: 20
+  DurationTime: 40
   Cost: 20
   Atk: 5
   AttackInterval: 4
   CoolTime: 3
   animator: {fileID: 2532125724622775396}
+  idle: 
+  attack: 
+  nowanim: 
+  oldanim: 
   circleCollider2d: {fileID: 5074183494106023508}
-  isAttack: 0
   AttackEffect: {fileID: 4089393359939094106}
+  isAttack: 0
 --- !u!114 &9137788355439217738
 MonoBehaviour:
   m_ObjectHideFlags: 0
