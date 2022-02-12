@@ -21,6 +21,13 @@ public class Unit : MonoBehaviour
 
     public Animator animator;
 
+    public string idle;
+
+    public string attack;
+
+    public string nowanim;
+    public string oldanim;
+
     public CircleCollider2D circleCollider2d;
 
     protected virtual void Update()
