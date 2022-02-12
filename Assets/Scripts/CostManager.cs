@@ -19,7 +19,6 @@ public class CostManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nowCostPoint = 0;
         UInowCostPoint = 0;
         SetValueToUI();
     }

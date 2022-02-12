@@ -42,10 +42,12 @@ public class UnitManager : MonoBehaviour
 
             if (!hit2d|| hit2d.transform.gameObject.tag != "DontSetUnit")
             {
+                /*
                 GameObject g = Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
                 RegisterObject ro = g.GetComponent<RegisterObject>();
                 ro.Init();
-
+                */
+                Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
                 costmanager.DownPoint(SelectedUnit.GetComponent<Unit>().Cost);
                 UnitPlaced = true;
                 SelectedUnit = null;

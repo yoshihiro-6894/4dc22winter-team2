@@ -10,7 +10,9 @@ public class CheckGameOver : MonoBehaviour
 
     public GameObject Effect;
 
-    
+    public int hp;
+
+    public int atk;
 
     void Awake()
     {
@@ -35,13 +37,29 @@ public class CheckGameOver : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collisionInfo)
     {
+        /*
+        if (collisionInfo.gameObject.tag == "PlayerUnit")
+        {
+            Debug.Log("!");
+            damage(collisionInfo.gameObject.GetComponent<Unit>().Atk);
+        }
+        */
         if(collisionInfo.gameObject.tag == "Core")
         {
             rigidbody2d.velocity = Vector2.zero;
             animator.SetTrigger("Explosion");
             Instantiate(Effect, transform.position, Quaternion.identity);
-            Destroy(gameObject, 1.5f);
-            //FadeManager.Instance.LoadScene("GameOver", 1.0f, true);
+            
+            Destroy(gameObject, 1.0f);
+        }
+    }
+
+    public void damage(int damage)
+    {
+        hp -= damage;
+        if (hp <= 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 }

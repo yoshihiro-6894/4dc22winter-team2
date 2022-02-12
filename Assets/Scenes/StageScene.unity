@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxCostPoint: 200
-  nowCostPoint: 0
+  nowCostPoint: 10
   ChargeSpeed: 5
   UItext: {fileID: 1436846768}
   CostBar: {fileID: 1344987149}
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: -8, y: 0}
-  MoveDirection: {x: 1, y: 0}
+  MoveDirection: {x: 0.5, y: 0}
   timer: 3
 --- !u!114 &245181575
 MonoBehaviour:
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: 0, y: 6}
-  MoveDirection: {x: 0, y: -0.5}
+  MoveDirection: {x: 0, y: -0.25}
   timer: 9
 --- !u!114 &245181576
 MonoBehaviour:
@@ -790,7 +790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: 8, y: 0}
-  MoveDirection: {x: -1, y: 0}
+  MoveDirection: {x: -0.5, y: 0}
   timer: 4
 --- !u!4 &271753769 stripped
 Transform:
@@ -1698,7 +1698,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17911887, y: 0.21072829}
+  m_Offset: {x: 0.20891565, y: 0.03194779}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1709,7 +1709,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8907027, y: 2.9960673}
+  m_Size: {x: 1.7186967, y: 2.161758}
   m_EdgeRadius: 0
 --- !u!50 &585486714
 Rigidbody2D:
@@ -4630,7 +4630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e935e215564a04c8c8f7bcac01a08ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 3
+  count: 200
   timeLimit: 0
   timeText: {fileID: 388952730}
 --- !u!4 &1774601051
