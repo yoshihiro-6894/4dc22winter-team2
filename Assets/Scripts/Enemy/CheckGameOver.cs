@@ -14,6 +14,8 @@ public class CheckGameOver : MonoBehaviour
 
     public int atk;
 
+    int count = 0;
+
     void Awake()
     {
         rigidbody2d = gameObject.GetComponent<Rigidbody2D>();
