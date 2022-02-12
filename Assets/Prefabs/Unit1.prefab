@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DurationTime: 15
   Cost: 10
-  Atk: 0
-  AttackInterval: 0
+  Atk: 10
+  AttackInterval: 3
   CoolTime: 1
 --- !u!114 &-1522580007239456115
 MonoBehaviour:

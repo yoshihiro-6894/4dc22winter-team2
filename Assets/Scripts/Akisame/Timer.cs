@@ -19,13 +19,19 @@ public class Timer : MonoBehaviour
     {
         //時間をカウントする
         count -= Time.deltaTime;
- 
+
+
+        if (count <= 10)
+        {
+            timeText.color = new Color(240, 0, 0);
+        }
+
         //時間を表示する
-        timeText.text = count.ToString("f2") + "秒";
+        timeText.text = count.ToString("f2");
  
         if(count <= timeLimit)
         {
-            timeText.text = "時間になりました！";
+            timeText.text = 0.ToString("f2");
         }
     }
 }
