@@ -35,9 +35,12 @@ public class UnitManager : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos.z = 10;
 
-            RaycastHit2D hit = Physics2D.CircleCast(Camera.main.ScreenToWorldPoint(mousePos), 0.1f, Vector2.up);
+            //RaycastHit2D hit = Physics2D.CircleCast(Camera.main.ScreenToWorldPoint(mousePos), 0.1f, Vector2.up);
 
-            if(!hit)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
+
+            if (!hit2d|| hit2d.transform.gameObject.tag != "DontSetUnit")
             {
                 GameObject g = Instantiate(SelectedUnit, Camera.main.ScreenToWorldPoint(mousePos), Quaternion.identity);
                 RegisterObject ro = g.GetComponent<RegisterObject>();
