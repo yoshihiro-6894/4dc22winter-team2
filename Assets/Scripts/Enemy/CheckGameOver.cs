@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class CheckGameOver : MonoBehaviour
 {
-    private Rigidbody2D rigidbody2D;
+    private Rigidbody2D rigidbody2d;
+
+    public Animator animator;
+
+    public GameObject Effect;
+
+    
 
     void Awake()
     {
-        rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
+        rigidbody2d = gameObject.GetComponent<Rigidbody2D>();
 
     }
     // Start is called before the first frame update
@@ -21,15 +27,21 @@ public class CheckGameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float x = rigidbody2d.velocity.x;
+        float y = rigidbody2d.velocity.y;
+        animator.SetFloat("VecX", x);
+        animator.SetFloat("VecY", y);
     }
 
     private void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        if(collisionInfo.gameObject.name == "HitEnemyForestGirl")
+        if(collisionInfo.gameObject.tag == "Core")
         {
-            Debug.Log("GAMEOVER");
-            FadeManager.Instance.LoadScene("GameOver", 1.0f, true);
+            rigidbody2d.velocity = Vector2.zero;
+            animator.SetTrigger("Explosion");
+            Instantiate(Effect, transform.position, Quaternion.identity);
+            Destroy(gameObject, 1.5f);
+            //FadeManager.Instance.LoadScene("GameOver", 1.0f, true);
         }
     }
 }
