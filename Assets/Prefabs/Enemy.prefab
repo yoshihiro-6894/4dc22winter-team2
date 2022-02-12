@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9118909860939352249}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: EnemyUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 9118909860939352249}
   Effect: {fileID: 6131974601236057837, guid: 519059693c77d8f44878e56373db280e, type: 3}
+  hp: 3
+  atk: 10
 --- !u!95 &9118909860939352249
 Animator:
   serializedVersion: 3

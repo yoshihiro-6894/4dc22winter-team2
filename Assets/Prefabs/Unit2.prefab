@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3423303270357810424}
   m_Layer: 8
   m_Name: Unit2
-  m_TagString: Untagged
+  m_TagString: PlayerUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,8 +100,10 @@ MonoBehaviour:
   DurationTime: 20
   Cost: 20
   Atk: 5
-  AttackInterval: 10
+  AttackInterval: 4
   CoolTime: 3
+  animator: {fileID: 0}
+  circleCollider2d: {fileID: 0}
 --- !u!114 &9137788355439217738
 MonoBehaviour:
   m_ObjectHideFlags: 0

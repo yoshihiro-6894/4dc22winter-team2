@@ -19,13 +19,15 @@ public class Unit : MonoBehaviour
     [Header("クールタイム")]
     public float CoolTime;
 
-    private float time = 0;
+    public Animator animator;
+
+    public CircleCollider2D circleCollider2d;
 
     protected virtual void Update()
     {
-        time += Time.deltaTime;
+        DurationTime -= Time.deltaTime;
 
-        if (time >= DurationTime)
+        if (0 >= DurationTime)
         {
             Destroy(this.gameObject);
         }

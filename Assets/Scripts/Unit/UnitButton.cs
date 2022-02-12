@@ -71,7 +71,7 @@ public class UnitButton : MonoBehaviour
             ChangAble = false;
             isCoolTime = true;
             cooltimebar.gameObject.SetActive(true);
-            Debug.Log(UnitData + "のクールタイムがオン");
+            //Debug.Log(UnitData + "のクールタイムがオン");
             ChangeInteractable(false);
             Unitmanager.UnitPlaced = false;
         }
