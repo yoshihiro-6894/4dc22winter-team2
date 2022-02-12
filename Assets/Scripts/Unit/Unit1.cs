@@ -6,19 +6,43 @@ public class Unit1 : Unit
 {
     private float time = 0;
 
+    private bool atk = false;
+
+    private void Start()
+    {
+ 
+    }
+
     protected override void Update()
     {
         base.Update();
         time += Time.deltaTime;
-        if (time >= AttackInterval)
+        if (atk)
         {
-            animator.SetTrigger("Biting");
-            time = 0;
+            //UŒ‚
+            if (time >= 1f)
+            {
+                atk = false;
+                animator.SetBool("Bite", atk);
+                time = 0;
+            }
+        }
+        else
+        {
+            //Idle
+            if (time >= AttackInterval)
+            {
+                atk = true;
+                animator.SetBool("Bite", atk);
+                time = 0;
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!atk) return;
+        
         if (collision.gameObject.tag == "EnemyUnit")
         {
             Debug.Log("!");
