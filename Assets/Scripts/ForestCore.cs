@@ -13,6 +13,12 @@ public class ForestCore : MonoBehaviour
 
     public Slider HpBar;
 
+    public Timer timer;
+
+    public GameObject MeiyoBeam;
+
+    public Animator animator;
+
     private void Start()
     {
         Hp = MaxHp;
@@ -33,9 +39,10 @@ public class ForestCore : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (timer.count <= 0)
         {
-            OnDamage(5);
+            MeiyoBeam.SetActive(true);
+            animator.SetTrigger("MeiyoBeam");
         }
     }
 }
