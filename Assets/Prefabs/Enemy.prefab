@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6f3f648c65177174f875d3f9c27e6ce0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0375ff87e184838419fc6cfb803ee8b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   animator: {fileID: 9118909860939352249}
   Effect: {fileID: 6131974601236057837, guid: 519059693c77d8f44878e56373db280e, type: 3}
   costmaanger: {fileID: 1144206604256244699, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+  forestcore: {fileID: 0}
   hp: 3
   atk: 10
   reward: 10
