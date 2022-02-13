@@ -8,11 +8,6 @@ public class Unit1 : Unit
 
     private bool atk = false;
 
-    private void Start()
-    {
- 
-    }
-
     protected override void Update()
     {
         base.Update();
@@ -23,7 +18,7 @@ public class Unit1 : Unit
             if (time >= 1f)
             {
                 atk = false;
-                animator.SetBool("Bite", atk);
+                animator.SetBool("isAttack", atk);
                 time = 0;
             }
         }
@@ -33,7 +28,7 @@ public class Unit1 : Unit
             if (time >= AttackInterval)
             {
                 atk = true;
-                animator.SetBool("Bite", atk);
+                animator.SetBool("isAttack", atk);
                 time = 0;
             }
         }
@@ -50,9 +45,4 @@ public class Unit1 : Unit
         }
     }
 
-    private void ResetValue()
-    {
-        //circleCollider2d.enabled = false;
-        //time = 0;
-    }
 }

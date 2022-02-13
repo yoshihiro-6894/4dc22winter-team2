@@ -48,15 +48,4 @@ public class Unit2 : Unit
             collision.gameObject.GetComponent<CheckGameOver>().damage(this.Atk);
         }
     }
-
-    public void Active()
-    {
-        AttackEffect.SetActive(true);
-    }
-
-    public void notActive()
-    {
-        AttackEffect.SetActive(false);
-        time = 0;
-    }
 }

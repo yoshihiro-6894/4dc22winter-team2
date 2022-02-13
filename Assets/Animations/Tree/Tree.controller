@@ -56,7 +56,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "4day 2022 \u6749\u30E6\u30CB\u30C3\u30C8 \u5E38"
+  m_Name: Tree
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isAttack
