@@ -722,7 +722,7 @@ MonoBehaviour:
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: -8, y: 0}
   MoveDirection: {x: 0.5, y: 0}
-  timer: 5
+  timer: 4
 --- !u!114 &245181575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +738,7 @@ MonoBehaviour:
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: 0, y: 6}
   MoveDirection: {x: 0, y: -0.25}
-  timer: 12
+  timer: 10
 --- !u!114 &245181576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +754,7 @@ MonoBehaviour:
   Enemy: {fileID: 2215978188231624193, guid: 2a8c2e85b639196729de5eebde14092d, type: 3}
   StartPosition: {x: 8, y: 0}
   MoveDirection: {x: -0.5, y: 0}
-  timer: 6
+  timer: 5
 --- !u!4 &271753769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3727552730873862501, guid: 71a3152877e88e327a572c4ce00bdebf, type: 3}
@@ -1700,63 +1700,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3727552730873862501, guid: 71a3152877e88e327a572c4ce00bdebf, type: 3}
   m_PrefabInstance: {fileID: 2060451391}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &596473712
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627560, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3268240959985627565, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
-      propertyPath: m_Name
-      value: Unit2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 97a86c270d1b9664988502b76907b66f, type: 3}
 --- !u!4 &604011935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3727552730873862501, guid: 71a3152877e88e327a572c4ce00bdebf, type: 3}
@@ -5596,6 +5539,10 @@ PrefabInstance:
       propertyPath: CostBar
       value: 
       objectReference: {fileID: 1344987149}
+    - target: {fileID: 1144206604256244699, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
+      propertyPath: ChargeSpeed
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1144206604256244699, guid: ac5848c920f5546409db76e7fd9e4775, type: 3}
       propertyPath: nowCostPoint
       value: 30
